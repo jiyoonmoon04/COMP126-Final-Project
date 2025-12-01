@@ -1,0 +1,206 @@
+/* =========================================================
+   GLOBAL STRUCTURE — mobile-first, semantic, accessible
+   ========================================================= */
+
+/* Sticky footer */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--offwhite);
+  font-family: Arial, sans-serif;
+  color: var(--brown);
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+}
+
+/* =========================================================
+   COLOR VARIABLES — tested for WCAG AA contrast
+   ========================================================= */
+:root {
+  --brown: #3a352e;        /* slightly darker for readable contrast */
+  --gold: #d8a631;         /* more contrast than original */
+  --gray: #6e675f;
+  --offwhite: #faf9f3;
+  --white: #ffffff;
+}
+
+/* =========================================================
+   RESET + BASE ACCESSIBILITY
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Accessibility: focus outlines */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   HEADER / NAVIGATION — flex layout, accessible
+   ========================================================= */
+.site-header {
+  background: var(--brown);
+  padding: 1rem;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  border: 2px solid var(--gold);
+  padding: 0.4rem 0.8rem;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* Mobile nav: inline links stack if needed */
+.main-nav a {
+  color: var(--white);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hover + Focus = accessible */
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--gold);
+}
+
+/* =========================================================
+   SECTION LAYOUT — mobile-first grid/flex
+   ========================================================= */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  text-align: left; /* reduces cognitive load */
+}
+
+/* =========================================================
+   IMAGE PLACEHOLDERS — responsive & accessible
+   ========================================================= */
+.hero-image,
+.dish-image,
+.menu-item-image,
+.map-placeholder,
+.about-image {
+  width: 100%;
+  background: var(--gray);
+  border-radius: 8px;
+}
+
+/* Keep hero image ratio predictable */
+.hero-image {
+  height: 220px;
+}
+
+/* =========================================================
+   FEATURED DISHES — mobile-first (stack); grid on desktop
+   ========================================================= */
+.featured-dishes {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile-first */
+  gap: 1rem;
+}
+
+.dish-card {
+  background: #f1e2b3;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* =========================================================
+   MENU ITEMS — grid layout
+   ========================================================= */
+.menu-items {
+  display: grid;
+  gap: 1rem;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1rem;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.menu-item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gray);
+}
+
+/* =========================================================
+   BUTTONS — accessible, consistent, keyboard-friendly
+   ========================================================= */
+.btn {
+  background: var(--gold);
+  color: var(--brown);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover + Focus parity */
+.btn:hover,
+.btn:focus-visible {
+  background: var(--brown);
+  color: var(--white);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--brown);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* different media */
+@media (min-width: 600px) {
+  .featured-dishes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 80px 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}
