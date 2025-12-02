@@ -5,6 +5,7 @@
 /* Sticky footer */
 html, body {
   height: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -20,6 +21,22 @@ main {
   flex: 1;
 }
 
+.section-title1 {
+  color: rgb(106, 61, 10);
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+.main_pic {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.logo {
+  width: 100%;
+  border-radius: 5px;
+}
 /* =========================================================
    COLOR VARIABLES — tested for WCAG AA contrast
    ========================================================= */
@@ -65,9 +82,9 @@ button:focus-visible {
 
 .logo-box {
   border: 2px solid var(--gold);
-  padding: 0.4rem 0.8rem;
-  color: var(--gold);
   font-weight: bold;
+  width: 100px;
+  height: 100px;
 }
 
 /* Mobile nav: inline links stack if needed */
@@ -94,10 +111,23 @@ button:focus-visible {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1.25rem;
-  text-align: left; /* reduces cognitive load */
+  text-align: center;
 }
+
+.section-title2 {
+  margin: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.hours {
+  margin: 30px;
+  font-size: 1rem;
+  text-align: center;
+}
+
 
 /* =========================================================
    IMAGE PLACEHOLDERS — responsive & accessible
