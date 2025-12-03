@@ -49,7 +49,6 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-/* Navigation */
 .site-header {
   background: #9a5217;
   padding: 1rem;
@@ -112,7 +111,6 @@ button:focus-visible {
   border-radius: 8px;
 }
 
-/* HOME */
 .home-main {
   display: grid;
 }
@@ -152,7 +150,6 @@ button:focus-visible {
   border-radius: 10px;
 }
 
-/* FEATURED DISHES */
 .main-bottom {
   max-width: 1300px;
   margin: 0 auto;
@@ -256,7 +253,6 @@ button:focus-visible {
   color: white;
 }
 
-/* Footer */
 .site-footer {
   background: #3a352e;
   color: white;
@@ -367,9 +363,9 @@ a {
   .nav-menu.activate {
     left: 0;
   }
+
 }
 
-/* Location Section */
 .location-section {
   display: grid;
   gap: 1.5rem;
@@ -412,7 +408,6 @@ a {
   }
 }
 
-/* Buttons */
 .location-btn {
   background: #d8a631;
   color: #3a352e;
@@ -428,4 +423,23 @@ a {
 .btn:focus-visible {
   background: #3a352e;
   color: white;
+}
+
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
