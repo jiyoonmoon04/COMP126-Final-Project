@@ -6,9 +6,9 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background: #faf9f3; /* offwhite */
+  background: #faf9f3;
   font-family: Arial, sans-serif;
-  color: #3a352e; /* brown */
+  color: #3a352e;
   line-height: 1.5;
 }
 
@@ -43,10 +43,9 @@ main {
   padding: 0;
 }
 
-/* Accessibility: focus outlines */
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #d8a631; /* gold */
+  outline: 3px solid #d8a631;
   outline-offset: 3px;
 }
 
@@ -136,13 +135,13 @@ button:focus-visible {
 .main-title {
   font-size: 4rem;
   font-weight: bold;
-  color: #3a352e; /* brown */
+  color: #3a352e;
   margin-bottom: 1rem;
 }
 
 .main-subtitle {
   font-size: 2rem;
-  color: #3a352e; /* brown */
+  color: #3a352e;
   max-width: 500px;
   margin: 0 auto;
 }
