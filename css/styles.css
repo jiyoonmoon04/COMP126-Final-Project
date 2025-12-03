@@ -62,39 +62,33 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-/* =========================================================
-   HEADER / NAVIGATION — flex layout, accessible
-   ========================================================= */
+/* Navigation */
 .site-header {
   background: #9a5217;
   padding: 1rem;
 }
 
 .nav-container {
-  max-width: 900px;
+  max-width: 1400px;
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .logo-box {
   width: 100px;
   height: 100px;
+  justify-content: flex-start;
 }
 
-
-/* =========================================================
-   SECTION LAYOUT — mobile-first grid/flex
-   ========================================================= */
 .section {
-  max-width: 1400px;   /* wider layout */
+  max-width: 1400px;
   margin: auto;
   padding: 1.5rem 2rem;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -124,10 +118,6 @@ button:focus-visible {
   object-fit: cover;
 }
 
-/* =========================================================
-   IMAGE PLACEHOLDERS — responsive & accessible
-   ========================================================= */
-.dish-image,
 .menu-item-image,
 .map-placeholder,
 .about-image {
@@ -135,12 +125,13 @@ button:focus-visible {
   border-radius: 8px;
 }
 
-
-
-
+@media (min-width: 768px) {
+    .logo-box {
+        justify-self: flex-start;
+    }
+}
 
 /* HOME */
-
 .home-main {
     display: grid;
 }
@@ -182,7 +173,6 @@ button:focus-visible {
 
 
 /* FEATURED DISHES */
-
 .main-bottom {
   max-width: 1300px;
   margin: 0 auto;
@@ -204,6 +194,7 @@ button:focus-visible {
   align-items: center;
   text-align: center;
   gap: 1rem;
+  height:300px;
   margin-bottom: 1.5rem;
 }
 
@@ -211,34 +202,18 @@ button:focus-visible {
   width: 100%;
   max-width: 350px;
   border-radius: 8px;
+  height: 200px;
 }
 
-/* MOBILE FIRST */
 .info-box {
   width: 80%;
-  background: #f1e2b3;
+  background: #d8a631;
   padding: 4rem;
   border-radius: 10px;
   margin-top: 5rem;
   text-align: center;
   margin: auto;
-}
-
-.full-menu-btn {
-  display: block;
-  width: 100%;
-  background: var(--gold);
-  color: var(--brown);
-  padding: 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 30px;
-  margin-bottom: 1rem;
-}
-
-.full-menu-btn:hover {
-  background: var(--brown);
-  color: var(--white);
+  margin-bottom: 5rem;
 }
 
 
@@ -257,7 +232,6 @@ button:focus-visible {
   border-radius: 10px;
 }
 
-  /* 2-column layout for featured dishes + info box */
   .main-bottom-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -265,12 +239,10 @@ button:focus-visible {
     margin: 2rem auto;
   }
 
-  /* left column title alignment */
   .main-bottom .section-title {
     text-align: left;
   }
 
-  /* dish layout stays horizontal */
   .horizontal-dish {
     flex-direction: row;
     width: 100%;
@@ -282,17 +254,12 @@ button:focus-visible {
 
   /* info box styling */
   .info-box {
-    background: #F1E2B3;
+    background: #d8a631;
     padding: 1.5rem;
     border-radius: 10px;
   }
 }
 
-
-
-/* =========================================================
-   BUTTONS — accessible, consistent, keyboard-friendly
-   ========================================================= */
 .btn {
   background: var(--gold);
   color: var(--brown);
@@ -303,12 +270,29 @@ button:focus-visible {
   font-weight: bold;
 }
 
-/* Hover + Focus parity */
 .btn:hover,
 .btn:focus-visible {
   background: var(--brown);
   color: var(--white);
 }
+
+.full-menu-btn {
+  display: block;
+  width: 100%;
+  background: #f1e2b3;
+  color: #3a352e;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.full-menu-btn:hover {
+  background: #3a352e;
+  color: white;
+}
+
 
 /* Footer */
 .site-footer {
@@ -320,7 +304,7 @@ button:focus-visible {
   font-size: 0.9rem;
 }
 
-/* different media */
+
 @media (min-width: 600px) {
   .featured-dishes {
     grid-template-columns: 1fr 1fr;
