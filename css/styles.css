@@ -318,7 +318,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 100%;
+  top: 70px;
   gap: 60px;
   max-width: 100vw;
   overflow-x: hidden;
